@@ -19,6 +19,32 @@ body {
 .navbar {
     background-color: transparent !important;
 }
+
+.jumbotron {
+    background-image: url(../images/bozhin-karaivanov-K6cC1D-_k_g-unsplash.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+}
+.jumbotron::after {
+    content: "";
+    background-color: lightgrey;
+    /* background-image: linear-gradient(to right, #1551b1, #f4f4f4); */
+    display:block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.jumbotron > * { /* all elements inside of first*/
+    z-index: 10;
+    position: relative;
+}
 /* .navigation {
     width: 100vw;
     height: 75px; 
